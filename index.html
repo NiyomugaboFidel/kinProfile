@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brown || Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-black min-h-screen flex items-center justify-center relative">
+  <!-- Background Design with Clip-Path -->
+
+  <div class="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 bg-design z-0"></div>
+
+
+  <div id="logo" class="lg:block hidden  absolute text-white top-[5%] left-[100px]">
+    <img class="w-[200px] h-[200px] rounded-full shadow-lg" src="./images/logo.png" alt="">
+    <h2 class="text-[32px] text-white font-bold text-center">Brown</h2>
+  </div>
+  <!-- Social Media Cards Container -->
+  <div id="socialMediaContainer" class="absolute inset-0 flex items-center justify-center z-20">
+    <!-- Centered Social Media Card -->
+    <div id="socialMediaCard"
+      class="hidden bg-black p-6 rounded-lg shadow-lg flex flex-col items-center space-y-4 z-20">
+      <!-- Card Content will be injected here via JavaScript -->
+
+    </div>
+    <div class="absolute">
+      <div class="circle-container">
+        <div class="circle bg-center bg-cover"></div>
+      </div>
+      <div class="circle-container">
+        <div class="circle bg-center bg-cover"></div>
+      </div>
+      <div class="circle-container">
+        <div
+          class=" bg-[url('https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png')] circle bg-center bg-cover">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Toggle Links Button -->
+    <button id="toggleLinksButton"
+      class="absolute top-5 right-10 bg-black hover:bg-[#003]  text-white px-4 py-2 rounded-lg z-10 flex gap-1">
+      Hide
+    </button>
+
+    <!-- Social Media Links -->
+    <div id="socialLinks" class="grid  lg:grid-cols-2 items-center  gap-5 z-10">
+      <!-- Instagram -->
+      <button aria-colspan="p-3"
+        onclick="showCard('Instagram', 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png', 'https://www.instagram.com/k_brow.n/?next=%2F')"
+        class="bg-black p-4 rounded-lg text-white hover:bg-gray-900 w-[200px]">
+        Instagram
+      </button>
+
+      <!-- WhatsApp -->
+      <button
+        onclick="showCard('WhatsApp', 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg', 'https://www.whatsapp.com')"
+        class="bg-black p-4 rounded-lg text-white hover:bg-gray-900 w-[200px]">
+        WhatsApp
+      </button>
+
+      <!-- LinkedIn -->
+      <button
+        onclick="showCard('LinkedIn', 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png', 'https://www.linkedin.com')"
+        class="bg-black p-4 rounded-lg text-white hover:bg-gray-900 w-[200px]">
+        LinkedIn
+      </button>
+
+      <!-- GitHub -->
+      <button
+        onclick="showCard('GitHub', 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg', 'https://github.com/KiniEsther')"
+        class="bg-black p-4 rounded-lg text-white hover:bg-gray-900 w-[200px]">
+        GitHub
+      </button>
+    </div>
+    <footer class="absolute bottom-0  text-white text-center py-4 ">
+      <p class="text-sm text-semibold flex item-center justify-center gap-1">&copy; <span id="year"></span> NF. All
+        rights reserved. <a href="./index.html" class="text-indigo-500 underline font-semibold cursor-pointer z-20">
+          Socail media</a></p>
+    </footer>
+    <script src="./main.js">
+
+    </script>
+</body>
+
+</html>
